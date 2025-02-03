@@ -24,11 +24,17 @@
 </head>
 <body>
     <div class="login-container">
+
+    <!-- error -->
+     <?php
+        if(isset($_GET['error'])):
+     ?>
+        <?php endif;?>
         <h3 class="text-center">Login</h3>
-        <form method="POST" action="">
+        <form method="POST" action="loginaction.php">
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" name="username" required>
+                <input type="email" class="form-control" name="email" required>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
